@@ -1,9 +1,0 @@
-README.md
-setup.py
-frames_viewer/__init__.py
-frames_viewer.egg-info/PKG-INFO
-frames_viewer.egg-info/SOURCES.txt
-frames_viewer.egg-info/dependency_links.txt
-frames_viewer.egg-info/not-zip-safe
-frames_viewer.egg-info/requires.txt
-frames_viewer.egg-info/top_level.txt
