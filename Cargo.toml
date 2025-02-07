@@ -1,0 +1,22 @@
+[package]
+name = "frames_viewer"
+version = "0.1.0"
+edition = "2021"
+description = "A fast OpenGL-based 6D frames viewer"
+license = "MIT"
+
+[dependencies]
+gl = "0.14"
+glutin = "0.29"
+glutin-winit = "0.2"
+raw-window-handle = "0.4"
+winit = { version = "0.27", features = ["x11"] }
+nalgebra = "0.32"
+parking_lot = "0.12"
+thiserror = "1.0"
+log = "0.4"
+env_logger = "0.10"
+
+[lib]
+name = "frames_viewer"
+crate-type = ["lib"]
