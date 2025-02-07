@@ -1,5 +1,6 @@
 mod renderer;
 mod camera;
+mod python;
 
 use glutin::{
     Api, ContextBuilder, GlRequest,
@@ -174,3 +175,6 @@ mod tests {
         assert_eq!(viewer.frames.read().len(), 1);
     }
 }
+
+// Re-export for Python
+pub use crate::python::*;

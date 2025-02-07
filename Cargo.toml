@@ -5,6 +5,10 @@ edition = "2021"
 description = "A fast OpenGL-based 6D frames viewer"
 license = "MIT"
 
+[lib]
+name = "frames_viewer"
+crate-type = ["cdylib", "rlib"]
+
 [dependencies]
 gl = "0.14"
 glutin = "0.29"
@@ -16,7 +20,5 @@ parking_lot = "0.12"
 thiserror = "1.0"
 log = "0.4"
 env_logger = "0.10"
-
-[lib]
-name = "frames_viewer"
-crate-type = ["lib"]
+pyo3 = { version = "0.20", features = ["extension-module", "abi3-py37"] }
+numpy = "0.20"
