@@ -13,9 +13,9 @@ pub struct Camera {
 impl Camera {
     pub fn new(aspect: f32) -> Self {
         Camera {
-            position: na::Point3::new(2.0, 2.0, 2.0),
+            position: na::Point3::new(1.5, 1.0, 2.0),
             target: na::Point3::new(0.0, 0.0, 0.0),
-            up: na::Vector3::new(0.0, 1.0, 0.0),
+            up: na::Vector3::new(0.0, 0.0, 1.0),
             fov: std::f32::consts::PI / 4.0,
             aspect,
             near: 0.1,

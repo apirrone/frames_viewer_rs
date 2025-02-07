@@ -144,7 +144,22 @@ impl Renderer {
                 ]);
             }
 
-            // XZ plane grid (vertical, facing forward)
+            // YZ plane grid (back wall)
+            for i in 0..=GRID_LINES {
+                let pos = i as f32 * GRID_STEP;
+                // Lines parallel to Y axis
+                grid_vertices.extend_from_slice(&[
+                    0.0, pos, 0.0, yz_color[0], yz_color[1], yz_color[2], yz_color[3],
+                    0.0, pos, GRID_SIZE, yz_color[0], yz_color[1], yz_color[2], yz_color[3],
+                ]);
+                // Lines parallel to Z axis
+                grid_vertices.extend_from_slice(&[
+                    0.0, 0.0, pos, yz_color[0], yz_color[1], yz_color[2], yz_color[3],
+                    0.0, GRID_SIZE, pos, yz_color[0], yz_color[1], yz_color[2], yz_color[3],
+                ]);
+            }
+
+            // XZ plane grid (side wall)
             for i in 0..=GRID_LINES {
                 let pos = i as f32 * GRID_STEP;
                 // Lines parallel to X axis
@@ -156,21 +171,6 @@ impl Renderer {
                 grid_vertices.extend_from_slice(&[
                     pos, 0.0, 0.0, xz_color[0], xz_color[1], xz_color[2], xz_color[3],
                     pos, 0.0, GRID_SIZE, xz_color[0], xz_color[1], xz_color[2], xz_color[3],
-                ]);
-            }
-
-            // YZ plane grid (vertical, facing sideways)
-            for i in 0..=GRID_LINES {
-                let pos = i as f32 * GRID_STEP;
-                // Lines parallel to Y axis
-                grid_vertices.extend_from_slice(&[
-                    0.0, 0.0, pos, yz_color[0], yz_color[1], yz_color[2], yz_color[3],
-                    0.0, GRID_SIZE, pos, yz_color[0], yz_color[1], yz_color[2], yz_color[3],
-                ]);
-                // Lines parallel to Z axis
-                grid_vertices.extend_from_slice(&[
-                    0.0, pos, 0.0, yz_color[0], yz_color[1], yz_color[2], yz_color[3],
-                    0.0, pos, GRID_SIZE, yz_color[0], yz_color[1], yz_color[2], yz_color[3],
                 ]);
             }
 
