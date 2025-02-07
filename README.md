@@ -2,6 +2,9 @@
 
 A fast OpenGL-based 6D frames viewer with Python bindings.
 
+> This is a re-implementation of https://github.com/apirrone/FramesViewer in rust with python bindings.
+> Absolutely everything has been done by Cursor editor (https://www.cursor.com/) with Claude 3.5 sonnet
+
 ## Requirements
 
 ### System Dependencies
