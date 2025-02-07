@@ -9,10 +9,16 @@ description = "A fast OpenGL-based 6D frames viewer with Python bindings"
 readme = "README.md"
 requires-python = ">=3.7"
 license = {text = "MIT"}
-dependencies = ["numpy"]
+dependencies = [
+    "numpy",
+    "numpy-typing",
+]
 
 [tool.setuptools.packages]
 find = {}
+
+[tool.setuptools.package-data]
+frames_viewer = ["*.pyi"]
 
 [tool.setuptools-rust]
 rust-extensions = [
