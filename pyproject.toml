@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64", "wheel", "setuptools-rust>=1.5.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frames_viewer"
+version = "0.1.0"
+description = "A fast OpenGL-based 6D frames viewer with Python bindings"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+dependencies = ["numpy"]
+
+[tool.setuptools.packages]
+find = {}
+
+[tool.setuptools-rust]
+rust-extensions = [
+    {path = ".", binding = "PyO3", module = "frames_viewer.frames_viewer"}
+] 
