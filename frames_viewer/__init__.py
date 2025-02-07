@@ -10,9 +10,11 @@ Features:
     - Interactive camera controls (orbit, pan, zoom)
     - Grid visualization in XY, XZ, and YZ planes
     - Color-coded axes (Red: X, Green: Y, Blue: Z)
+    - Utilities for frame transformations and manipulations
 """
 
 from .frames_viewer import Viewer
+from . import utils
 
-__all__ = ['Viewer']
+__all__ = ['Viewer', 'utils']
 __version__ = '0.1.0' 

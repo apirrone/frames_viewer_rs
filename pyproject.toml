@@ -12,6 +12,7 @@ license = {text = "MIT"}
 dependencies = [
     "numpy",
     "numpy-typing",
+    "scipy>=1.7.0",
 ]
 
 [tool.setuptools.packages]
