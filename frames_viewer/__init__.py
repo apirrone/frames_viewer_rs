@@ -14,6 +14,7 @@ Features:
 """
 
 from .frames_viewer import Viewer
+
 from . import utils
 
 __all__ = ['Viewer', 'utils']
